@@ -1,0 +1,64 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<link rel="icon" href="/static/images/logo-title.png" type="image/x-icon">
+
+
+<body style="background-color: #3d3d3d">
+    {% for book in books %}
+    <title>
+        {{book.title}}
+    </title>
+    <div>
+        <div class="read-book">
+            <div class="read-book-img">
+                <img src="{{book.img}}" alt="">
+            </div>
+
+            <div>
+                <div class="read-book-title">
+                    <h1>{{book.title}}{{book.subtitle}}</h1>
+                </div>
+                <div class="read-book-info">
+                    <h2>by {{book.author}} </h2>
+                    <br>
+                    <h3>My Rating: {{book.my_rating}}</h3>
+                    <h3>Date Finished: {{book.date_fin}}</h3>
+                    <h3>Genre: {{book.genre}}</h3>
+                </div>
+            </div>
+            
+            <div class="edit-button">
+                <h4><a href="{% url 'edit-book' book.book_id %}">edit</a></h4>
+            </div>
+        </div>
+
+        <div class="sentences">
+            <br>
+            <div class="sentences-info">
+                <h3>{{book.sentence_1}}</h3>
+                <br>
+                <h3>{{book.sentence_2}}</h3>
+                <br>
+                <h3>{{book.sentence_3}}</h3>
+                <br>
+            </div>
+        </div>
+
+        <div class="highlights">
+            <div class="highlights-title">
+                <h1><u>Highlights</u></h1>
+            </div>
+            <br>
+            <div class="highlights-info">
+                {{ book.highlights|linebreaks }}
+            </div>
+
+            <br>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+
+{% endblock content %}
