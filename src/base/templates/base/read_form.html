@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<title>Add/Edit Book</title>
+
+<link rel="icon" href="/static/images/logo-title.png" type="image/x-icon">
+
+<body style="background-color: #3d3d3d">
+    <div class="read-form">
+        <form method = "POST" action="">
+            {% csrf_token %}
+
+            <div class="read-form-content">
+                <br>
+                <h3>Title: {{form.title_search}}</h3>
+                <br>
+                <h3>My Rating: {{form.my_rating}}</h3>
+                <br>
+                <h3>Date Finished: {{form.date_fin}}</h3>
+                <br>
+                <h3>3 Sentences:
+                {{form.sentence_1}}
+                {{form.sentence_2}}
+                {{form.sentence_3}}</h3>
+                <br>
+                <h3>Highlights: </h3>
+                <h3>{{form.highlights}}</h3>
+                <br>
+            </div>
+
+            <div class="read-submit-button">
+                <input type="submit" value="Submit" />
+            </div>
+            <br>
+
+        </form>
+    </div>
+</body>
+
+{% endblock content %}
