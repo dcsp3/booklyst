@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+<title>
+    Read Later
+</title>
+
+<link rel="icon" href="/static/images/logo-title.png" type="image/x-icon">
+
+
+<body style="background-color: #3d3d3d">
+    <br>
+    <div class="read-later">
+        <h1><center><span>READ LATER</span></center></h1>
+    </div>
+
+    <div >
+        <div>
+            {% for book in unread_books %}
+            <div class="unread-book">
+                <div class="unread-book-img">
+                    <img src="{{book.img}}">
+                </div>
+
+                <div>
+                    <div class="unread-book-title">
+                        <h1>{{book.title}}{{book.subtitle}}</h1>
+                    </div>
+
+                    <div class="unread-book-info">
+                        <h2> by {{book.author}}</h2>
+                        <br>
+                        <h4>{{book.summary}}</h4>
+                    </div>
+                </div>
+                
+                <div class="unread-delete-button">
+                    <h4><a href="{% url 'delete-unread-book' book.book_id %}">remove</a></h4>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+    <br>
+    <div class="add-unread">
+        <a href="{% url 'add-unread-book' %}">+ ADD BOOK</a>
+    </div>
+    <br>
+</body>
+
+{% endblock content %}
