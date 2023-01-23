@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<title>Add to Read Later</title>
+
+<link rel="icon" href="/static/images/logo-title.png" type="image/x-icon">
+
+
+<body style="background-color: #3d3d3d">
+    <div class="unread-form">
+        <form method = "POST" action="">
+            {% csrf_token %}
+            <div class="unread-form-content">
+                <br>
+                <h3>Title: {{form.title_search}}</h3>
+                <br>
+            </div>
+            <div class="unread-submit-button">
+                <input type="submit" value="Submit" />
+                
+            </div>
+            <br>
+        </form>
+    </div>
+</body>
+    
+{% endblock content %}
