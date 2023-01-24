@@ -18,28 +18,32 @@ Please note that the add book, edit and delete buttons are intentionally disable
 
 # Features
 
-1. MY BOOKS : Add read books [explain how a form is used to add read books and all the details. explain search and google api here as well]
-2. READ LIST : Add books user wants to read later [same as previous, briefly mention google API and explain what all info is returned and how it is saved]
-3. INDIVIDUAL BOOK : Explain how everything is displayed and can be edited / removed [do the remove for up as well]
+## MY BOOKS
+This is the homepage of the website and displays all the books added by the user in a list. It shows the cover page, title, author, rating, date finished and genre for each book. It also has a remove button for each book which deletes it from the database.
+
+## READ LATER 
+This webpage displays all the books added to "Read Later" by the user. It displays the cover page, title, author and summary of the book. It also has a remove button for each book which deletes it from the database. 
+
+## INDIVIDUAL BOOK PAGES
+Each book in "MY BOOKS" has a separate page (identified by the book id) which shows all information about the book from the homepage and the 3 sentences and highlights given by the user. It also has an edit button to make any changes to the information.
 
 
+# How It Works
+## Adding a book to "My Books"
+To add a book to the list of read books, the user has to click on the "Add Book" button at the bottom of the home webpage. This leads to a new page with a form. The user has to input the title, rating, date finished, 3 sentences (or 3 major learnings) and highlights from the book. On clicking submit, the title of the book is used as the search term for the Google Books API to retrieve the cover, title and author of the book. This is then saved in the database and displayed on the "My Books" webpage.
 
-# Usage/Examples
-
-[add screenshots and video/gif?]
+## Adding a book to "Read Later"
+To add a book to the list of unread books, the user has to click on the "Add Book" button at the bottom of the read later webpage. This leads to a new page with a form that only has a 'title' field. On clicking submit, the title of the book is used as a search term for the Google Books API to retrieve the cover, title, author and the summary of the book. This is then saved in the database and displayed on the "Read Later" webpage.
+ 
 
 # Installation
-This project can be replicated by creating a django app and copying the files [explain how to create app perhaps/ link  documentation?]
+Since django files are automatically generated and individual to each web app, a possible method to replicate this project is to create an app using the [documentation](https://docs.djangoproject.com/en/4.1/intro/tutorial01/) and copy-pasting the python, html and css files.
 
 # Technologies Used
+1. [Django](https://www.djangoproject.com/): Web framework
+2. [Google Books API](https://developers.google.com/books/):  Retrieving book information
 
-1. django for the web framework
-2. google books api to return the book id, img, title, cover img etc etc from the search term 
-
-
-# References
-[documentations for api and creating django web app here]
 
 # Attributions
-Logo Text : 
-Logo Image : 
+- Logo icon designed by [Smashicons](https://www.flaticon.com/authors/smashicons) from www.flaticon.com
+- Logo text by [calligraphyfonts.net](https://www.fontspace.com/good-memories-font-f71165) from www.fontspace.com
