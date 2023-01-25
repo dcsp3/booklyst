@@ -1,31 +1,19 @@
-# Booklyst
-[maybe logo and banner here (before heading or remove heading]
-
-Booklyst is a website that stores all information on books. It uses the google books API to get details of a book.....
-
-
-This is a project only meant for personal use. 
+Bookylst is a web app used to store a user's book information. The main webpage features a list of books entered by the user and information regarding them. Each book has it's own separate page which shows further details like 3 sentences and highlights of the book. It also features a "Read Later" webpage which can be used to list any book the user may want to read in the future. The web app uses Google Books API and it's database to retrieve information. This is a project built for personal use.
 
 [insert screenshot of website here]
 
-It is deployed on the web using the free python anywhere web app
-
-The website can be accessed at https://dcsp3.pythonanywhere.com.
-
-Please note that the add book, edit and delete buttons are intentionally disabled due to this project being a 
-
-
+Booklyst is hosted on [PythonAnywhere](https://www.pythonanywhere.com) and is live on https://dcsp3.pythonanywhere.com. Please note that it is not mobile compatible.
 
 # Features
 
-## MY BOOKS
+## My Books
 This is the homepage of the website and displays all the books added by the user in a list. It shows the cover page, title, author, rating, date finished and genre for each book. It also has a remove button for each book which deletes it from the database.
 
-## READ LATER 
+## Read Later 
 This webpage displays all the books added to "Read Later" by the user. It displays the cover page, title, author and summary of the book. It also has a remove button for each book which deletes it from the database. 
 
-## INDIVIDUAL BOOK PAGES
-Each book in "MY BOOKS" has a separate page (identified by the book id) which shows all information about the book from the homepage and the 3 sentences and highlights given by the user. It also has an edit button to make any changes to the information.
+## Individual Book Pages
+Each book in "My Books" has a separate page (identified by the book id) which shows all information about the book from the homepage and the 3 sentences and highlights given by the user. It also has an edit button to make any changes to the information.
 
 
 # How It Works
