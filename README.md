@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/88645471/214642823-7a2af6d7-03c0-4326-ab07-77d784b76e54.png)
 
-Bookylst is a web app used to store a user's book information. The main webpage features a list of books entered by the user and information regarding them. Each book has it's own separate page which shows further details like 3 sentences and highlights of the book. It also features a "Read Later" webpage which can be used to list any book the user may want to read in the future. The web app uses Google Books API and it's database to retrieve information. This is a project made for personal use.
+Booklyst is a web app used to store a user's book information. The main webpage features a list of books entered by the user and information regarding them. Each book has it's own separate page which shows further details like 3 sentences and highlights of the book. It also features a "Read Later" webpage which can be used to list any book the user may want to read in the future. The web app uses Google Books API and it's database to retrieve information. This is a project made for personal use.
 
 The website is hosted on [PythonAnywhere](https://www.pythonanywhere.com) and is live on https://dcsp3.pythonanywhere.com. Please note that it is not mobile compatible.
 
